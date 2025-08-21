@@ -1,7 +1,22 @@
 <app-navbar></app-navbar>
-<app-presentacion></app-presentacion>
-<app-sobremi></app-sobremi>
-<app-skills></app-skills>
-<app-proyectos></app-proyectos>
-<app-contactame></app-contactame>
+
+@defer {
+  <app-presentacion></app-presentacion>
+}
+
+@defer {
+  <app-sobremi></app-sobremi>
+}
+
+@defer {
+  <app-skills></app-skills>
+}
+
+@defer {
+  <app-proyectos></app-proyectos>
+}
+
+@defer {
+  <app-contactame></app-contactame>
+}
 <canvas #canvasEstrellas class="canvas-fondo"></canvas>
