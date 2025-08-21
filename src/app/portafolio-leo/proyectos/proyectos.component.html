@@ -1,0 +1,23 @@
+<div class="mt-10 w-[90%] mx-auto">
+  <h1 class="text-4xl font-bold colorRed text-center mb-10"  data-aos="zoom-in" data-aos-duration="1000">Proyectos</h1>
+  <div class="page-content grid grid-cols-1 md:grid-cols-2 gap-5">
+  @for (item of listProyectData(); track item) {
+    <div class="card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+      <div class="image-wrapper">
+        <img [src]="item.imgProyect" class="imgProyect" [alt]="item.nombreProyecto">
+      </div>
+      <div class="content flex flex-col gap-2">
+        <h2 class="title "> {{item.nombreProyecto}} </h2>
+        <div class="flex items-center gap-3 w-[8%]">
+          @for (img of item.imgTec; track img) {
+            <img [src]="img" alt="" class="">
+          }
+        </div>
+        <!-- <p class="copy">Check out all of these gorgeous mountain trips...</p> -->
+         <a [href]="item.enlace" class="bg-[#b22222] mt-1 text-base font-medium px-2 py-1 cursor-pointer max-w-max rounded-xl">Ver proyecto</a>
+        <!-- <button class="btn">View Trips</button> -->
+      </div>
+    </div>
+  }
+</div>
+</div>

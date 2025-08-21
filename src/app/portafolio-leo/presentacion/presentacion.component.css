@@ -1,0 +1,125 @@
+@property --angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@property --z {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes revolve {
+  from {
+    --angle: 0deg;
+    --z: -1;
+  }
+  to {
+    --angle: 360deg;
+    --z: 0;
+  }
+}
+
+.orbit-container {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 400px;
+}
+
+.planet img {
+  width: 250px;
+}
+
+.moon, .satellite, .potato {
+  --x-amplitude: 200px;
+  --y-amplitude: 60px;
+  --x: calc(cos(var(--angle)) * var(--x-amplitude));
+  --y: calc(sin(var(--angle)) * var(--y-amplitude));
+  transform: rotate(var(--rotation)) translate(var(--x), var(--y)) rotate(calc(var(--rotation) * -1));
+  animation: revolve 6s linear infinite;
+  z-index: calc(var(--z));
+
+}
+
+.moon {
+
+  --rotation: 0deg;
+  animation-delay: 0s;
+}
+.satellite {
+  --rotation: 60deg;
+  animation-delay: -2s;
+}
+.potato {
+  --rotation: 120deg;
+  animation-delay: -4s;
+}
+
+.moon img, .satellite img, .potato img {
+  width: 40px;
+}
+.orbit-path {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed rgba(255, 255, 255, 0.3); /* puedes usar otra opacidad/color */
+  border-radius: 50%;
+  transform: rotate(var(--rotation));
+}
+.orbit-path.moon {
+  width: calc(2 * var(--x-amplitude));
+  height: calc(2 * var(--y-amplitude));
+  margin: auto;
+}
+.orbit-path.satellite {
+  width: calc(2 * var(--x-amplitude));
+  height: calc(2 * var(--y-amplitude));
+  margin: auto;
+}
+.orbit-path.potato {
+  width: calc(2 * var(--x-amplitude));
+  height: calc(2 * var(--y-amplitude));
+  margin: auto;
+}
+
+/*boton animado*/
+.btn-descargar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  background-color: #B22222;
+  color: white;
+  border: none;
+  
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 160px;
+}
+
+.btn-descargar .icono {
+  margin-left: -20px;
+  margin-right: 8px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-descargar .texto {
+  margin-left: -10px;
+  transition: transform 0.3s ease;
+}
+
+.btn-descargar:hover .icono {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.btn-descargar:hover .texto {
+  transform: translateX(15px);
+}

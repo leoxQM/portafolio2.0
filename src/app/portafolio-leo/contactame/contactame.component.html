@@ -1,0 +1,55 @@
+<div class="mt-10 w-[90%] mx-auto mb-8">
+  <h1 class="text-4xl font-bold colorRed text-center" data-aos="zoom-in" data-aos-duration="1000">Contactame</h1>
+  <div class="backdrop-blur-xs bg-white/5 rounded-xl p-4 mt-6">
+    <form action="https://formspree.io/f/mblkenzr"
+          method="POST"
+          [formGroup]="formData"
+          (ngSubmit)="enviar()"
+          class="flex flex-col gap-8" >
+      <div class="">
+        <p-floatlabel data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+          <input id="name" pInputText formControlName="name" class="w-full" />
+          <label class="colorRed" for="name">Nombre (*)</label>
+        </p-floatlabel>
+        <app-form-errors [control]="formData.get('name')" [fieldName]="'name'" [customMessages]="customErrorMessages">
+        </app-form-errors>
+      </div>
+      <div class="">
+        <p-floatlabel data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+          <input id="email" pInputText type="email" formControlName="email" class="w-full" />
+          <label class="colorRed" for="email">Correo (*)</label>
+        </p-floatlabel>
+        <app-form-errors [control]="formData.get('email')" [fieldName]="'email'" [customMessages]="customErrorMessages">
+        </app-form-errors>
+      </div>
+      <div class="">
+        <p-floatlabel data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+          <textarea id="message" pInputText formControlName="message" class="w-full"></textarea>
+          <label class="colorRed" for="message">Mensaje (*)</label>
+        </p-floatlabel>
+        <app-form-errors [control]="formData.get('message')" [fieldName]="'message'" [customMessages]="customErrorMessages">
+        </app-form-errors>
+      </div>
+      <button class="btnEnviar" pButton pRipple type="submit">
+        @switch (estado()) {
+        @case ('enviando') {
+          <div class="" data-aos="zoom-in" data-aos-duration="500">
+            <i class="pi pi-spin pi-spinner mr-1"></i> Enviando
+          </div>
+        }
+        @case ('enviado') {
+          <div class="" data-aos="zoom-in" data-aos-duration="500">
+            <i class="pi pi-check-circle mr-1"></i> Enviado con éxito
+          </div>
+        }
+        @default {
+          <div class="" data-aos="zoom-in" data-aos-duration="500">
+            <i class="pi pi-send mr-1"></i> Enviar
+          </div>
+        }
+        }
+      </button>
+    </form>
+  </div>
+</div>
+

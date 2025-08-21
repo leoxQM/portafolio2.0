@@ -1,0 +1,70 @@
+[
+  {
+    "categoria": "FrontEnd",
+    "resumen":"Diseño y desarrollo sitios web modernos, responsivos y funcionales usando tecnologías como Angular, HTML, CSS, TypeScript, Bootstrap, Tailwind y PrimeNG. Me enfoco en brindar experiencias de usuario intuitivas y eficientes.",
+    "imagenes":[
+      {
+        "ruta":"/imgLeo/html.svg",
+        "nombre":"HTML"
+      },
+      {
+        "ruta":"/imgLeo/css.svg",
+        "nombre":"CSS"
+      },
+      {
+        "ruta":"/imgLeo/js.svg",
+        "nombre":"JavaScript"
+      },
+      {
+        "ruta":"/imgLeo/ts.svg",
+        "nombre":"TypeScript"
+      },
+      {
+        "ruta":"/imgLeo/angular.svg",
+        "nombre":"Angular"
+      },
+      {
+        "ruta":"/imgLeo/tailwind.svg",
+        "nombre":"Tailwind CSS"
+      },
+      {
+        "ruta":"/imgLeo/primeng.svg",
+        "nombre":"PrimeNg"
+      },
+      {
+        "ruta":"/imgLeo/bootstrap.svg",
+        "nombre":"Bootstrap"
+      }
+    ]
+  },
+  {
+    "categoria": "BackEnd",
+    "resumen":"Construyo soluciones robustas con Java y Spring Boot, integrando bases de datos SQL Server y desarrollando APIs REST. Utilizo herramientas como Postman para pruebas, Git para control de versiones y sigo buenas prácticas de desarrollo backend.",
+    "imagenes":[
+      {
+        "ruta":"/imgLeo/java.svg",
+        "nombre":"Java"
+      },
+      {
+        "ruta":"/imgLeo/springboot.svg",
+        "nombre":"SpringBoot"
+      },
+      {
+        "ruta":"/imgLeo/sqlserver.svg",
+        "nombre":"SQL Server"
+      },
+      {
+        "ruta":"/imgLeo/postman.svg",
+        "nombre":"Postman"
+      },
+      {
+        "ruta":"/imgLeo/github.svg",
+        "nombre":"GitHub"
+      },
+      {
+        "ruta":"/imgLeo/gitlab.svg",
+        "nombre":"GitLab"
+      }
+    ]
+  }
+]

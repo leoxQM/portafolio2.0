@@ -1,0 +1,33 @@
+<div class="mt-16 w-[90%] mx-auto">
+  <h1 class="text-4xl font-bold colorRed text-center"  data-aos="zoom-in" data-aos-duration="1000">Habilidades</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+    @for (item of listHabilidades(); track item) {
+      <div class="tarjetas" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+      <div class="tarjeta w-[90%]">
+        <div class="frontal">
+          <div class="contenido">
+            <p class="text-center text-3xl font-bold"> {{item.categoria}} </p>
+            <hr>
+            <p class="text-base font-semibold"> {{item.resumen}} </p>
+            <p class="colorRed font-bold text-lg mt-2 flex sm:hidden">Click aqui para ver tecnologias</p>
+          </div>
+        </div>
+        <div class="tracero">
+          <div class="contenido">
+            <p class="text-2xl font-bold">Tecnologias que uso</p>
+            <hr class="mb-8">
+            <div class="grid grid-cols-3 gap-4">
+              @for (img of item.imagenes; track img) {
+                <div class="flex justify-center items-center gap-2 flex-col">
+                  <img [src]="img.ruta" [alt]="img.nombre" class="w-[55%]">
+                  <h2 class="text-sm"> {{img.nombre}} </h2>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+body {
+  overflow-x: hidden;
+  background-color: #F5F5F5;
+}
+
+.my-app-dark body{
+  background-color: #121212;
+}
+.my-app-dark .menu-activador-linea{
+  background-color: #ffffff !important;
+}
+[data-aos] {
+  overflow-anchor: none;
+}
+.colorRed{
+  color: #b22222;
+}
+
+p-floatlabel .p-floatlabe-over{
+  color: #b22222 !important;
+}
+
+.btnEnviar {
+  background-color: #b22222 !important;
+  font-size: large !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+  padding: 0.5rem 1rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.canvas-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: black;
+}

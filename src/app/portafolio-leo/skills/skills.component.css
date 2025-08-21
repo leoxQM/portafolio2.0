@@ -1,0 +1,86 @@
+.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.tarjeta {
+	margin: .5rem;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+
+.tarjeta .frontal,
+.tarjeta .tracero {
+  width: auto;
+	height: auto;
+	min-height: 350px;
+	background-size: cover;
+	background-position: center;
+
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+
+	color: #fff;
+	text-align: center;
+
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.tarjeta .frontal {
+  background: linear-gradient(to bottom, #B22222, #000000);
+  /* Posicion por defecto */
+  transform: rotateY(0deg);
+}
+.tarjeta .tracero {
+	width: 100%;
+	background: linear-gradient(to top, #B22222, #000000);
+	top: 0;
+	left: 0;
+	position: absolute;
+  /* Posicion por defecto */
+	transform: rotateY(180deg);
+}
+/* Velocidad de trancicion */
+.tarjeta:hover .frontal,
+.tarjeta:hover .tracero {transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);}
+
+/* Girar imagen */
+.tarjeta:hover .frontal {transform: rotateY(-180deg);}
+.tarjeta:hover .tracero {transform: rotateY(0deg);}
+
+
+.tarjeta .contenido {
+	width: 100%;
+  height: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  /* Nueva forma de centrar vertical y horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Mantener efecto 3D */
+  perspective: inherit;
+  transform: translateZ(60px) scale(0.94);
+
+  /* Evitar desbordes por palabras largas */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.frontal .contenido p {
+	position: relative;
+	margin-bottom: .5rem;
+}
+.frontal .contenido hr {
+	width: 4rem;
+	height: 1px;
+
+	background: #C6D4DF;
+
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+.frontal .contenido span {color: rgba(255, 255, 255, 0.7);}

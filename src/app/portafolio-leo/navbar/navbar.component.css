@@ -1,0 +1,42 @@
+.menu-activador {
+  width: 30px;
+  height: 20px;
+  margin: 7px auto;
+
+}
+#lanzador {
+  position: absolute;
+  left: -9999px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  cursor: pointer;
+}
+.menu-activador-linea {
+  font-weight: bold;
+  height: 2px;
+  background-color: #000;
+  opacity: 1;
+  transition:  0.3s ease, opacity 0.3s ease;
+}
+
+#lanzador:checked~label .menu-activador-linea {
+  &:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+  }
+
+  &:nth-child(2) {
+    opacity: 0;
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+  }
+
+  &:nth-child(3) {
+    transform: translateY(-9px)rotate(-45deg);
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+  }
+}
+
