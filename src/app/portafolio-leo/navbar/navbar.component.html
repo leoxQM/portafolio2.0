@@ -1,30 +1,40 @@
-<div class="w-full fixed left-0 top-0 z-50 backdrop-blur-md bg-transparent">
-  <div class="flex justify-between w-[90%] mx-auto py-3">
+<div class="w-full fixed left-0 top-0 z-50 backdrop-blur-3xl bg-transparent">
+  <div class="flex justify-between w-[90%] xl:w-[75%] mx-auto py-3 xl:py-8">
     <div class="" data-aos="fade-right">
-      <span class="font-bold text-xl">
+      <span class="font-bold text-xl xl:text-3xl">
         &lt;<span class="">Leo</span><span class="colorRed">Deev</span>/&gt;
       </span>
     </div>
-    <div class="" >
-      <div class="menu-activador" >
-        <input type="checkbox" id="lanzador" />
-        <label for="lanzador">
-          <span class="menu-activador-linea"
-                data-aos="fade-left"
-                data-aos-delay="100"
-
-          ></span>
-          <span class="menu-activador-linea"
-                data-aos="fade-left"
-                data-aos-delay="200"
-
-          ></span>
-          <span class="menu-activador-linea"
-                data-aos="fade-left"
-                data-aos-delay="300"
-
-          ></span>
-        </label>
+    <div class="hidden xl:flex items-center justify-start gap-10">
+      <div class="hidden xl:flex gap-10 text-white font-semibold text-lg" data-aos="fade-left">
+        <div (click)="goTo('inicio')" class="cursor-pointer hover:text-[#B22222] transition-colors duration-300">Inicio</div>
+        <div (click)="goTo('sobremi')" class="cursor-pointer hover:text-[#B22222] transition-colors duration-300">Sobre mi</div>
+        <div (click)="goTo('skills')" class="cursor-pointer hover:text-[#B22222] transition-colors duration-300">Habilidades</div>
+        <div (click)="goTo('proyectos')" class="cursor-pointer hover:text-[#B22222] transition-colors duration-300">Proyectos</div>
+        <div (click)="goTo('contactame')" class="cursor-pointer hover:text-[#B22222] transition-colors duration-300">Contactame</div>
+      </div>
+    </div>
+    <div class="card flex xl:hidden">
+      <p-drawer header="Menu" [(visible)]="visible2" position="right">
+        <div class="flex flex-col gap-4 text-lg font-semibold mt-4">
+          <div (click)="goTo('inicio')" class="">Inicio</div>
+          <div (click)="goTo('sobremi')" class="">Sobre mi</div>
+          <div (click)="goTo('skills')" class="">Habilidades</div>
+          <div (click)="goTo('proyectos')" class="">Proyectos</div>
+          <div (click)="goTo('contactame')" class="">Contactame</div>
+        </div>
+      </p-drawer>
+      <div class="flex gap-2 justify-center">
+        <div (click)="visible2 = true" class="text-white">
+          <div class="menu-activador">
+            <!-- <input type="checkbox" id="lanzador" /> -->
+            <label for="lanzador">
+              <span class="menu-activador-linea" data-aos="fade-left" data-aos-delay="100"></span>
+              <span class="menu-activador-linea" data-aos="fade-left" data-aos-delay="200"></span>
+              <span class="menu-activador-linea" data-aos="fade-left" data-aos-delay="300"></span>
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </div>

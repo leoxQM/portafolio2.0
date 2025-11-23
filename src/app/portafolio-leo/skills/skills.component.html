@@ -1,9 +1,9 @@
-<div class="mt-16 w-[90%] mx-auto">
-  <h1 class="text-4xl font-bold colorRed text-center"  data-aos="zoom-in" data-aos-duration="1000">Habilidades</h1>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+<div class="mt-16 w-[90%] xl:mt-56 xl:w-[60%] mx-auto">
+  <h1 class="text-4xl xl:text-5xl font-bold colorRed text-center"  data-aos="zoom-in" data-aos-duration="1000">Habilidades</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8 xl:mt-16">
     @for (item of listHabilidades(); track item) {
       <div class="tarjetas" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
-      <div class="tarjeta w-[90%]">
+      <div class="tarjeta w-[90%] xl:w-full">
         <div class="frontal">
           <div class="contenido">
             <p class="text-center text-3xl font-bold"> {{item.categoria}} </p>

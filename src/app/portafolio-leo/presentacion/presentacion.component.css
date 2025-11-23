@@ -28,9 +28,9 @@
   height: 400px;
 }
 
-.planet img {
+/* .planet img {
   width: 250px;
-}
+} */
 
 .moon, .satellite, .potato {
   --x-amplitude: 200px;
@@ -83,43 +83,4 @@
   margin: auto;
 }
 
-/*boton animado*/
-.btn-descargar {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 20px;
-  background-color: #B22222;
-  color: white;
-  border: none;
-  
-  font-size: 16px;
-  cursor: pointer;
-  overflow: hidden;
-  min-width: 160px;
-}
 
-.btn-descargar .icono {
-  margin-left: -20px;
-  margin-right: 8px;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: inline-block;
-  text-align: center;
-}
-
-.btn-descargar .texto {
-  margin-left: -10px;
-  transition: transform 0.3s ease;
-}
-
-.btn-descargar:hover .icono {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.btn-descargar:hover .texto {
-  transform: translateX(15px);
-}

@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { SvgGithubComponent } from "../../@shared/svg-github/svg-github.component";
 import { SvgGitlabComponent } from "../../@shared/svg-gitlab/svg-gitlab.component";
 import { SvgLinkedinComponent } from "../../@shared/svg-linkedin/svg-linkedin.component";
+import { InicioComponent } from "../../@shared/inicio/inicio.component";
 
 @Component({
   selector: 'app-presentacion',
-  imports: [SvgGithubComponent, SvgGitlabComponent, SvgLinkedinComponent],
+  imports: [InicioComponent],
   templateUrl: './presentacion.component.html',
   styleUrl: './presentacion.component.css'
 })

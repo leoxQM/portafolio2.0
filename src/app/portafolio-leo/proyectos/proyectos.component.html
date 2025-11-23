@@ -1,6 +1,6 @@
-<div class="mt-10 w-[90%] mx-auto">
-  <h1 class="text-4xl font-bold colorRed text-center mb-10"  data-aos="zoom-in" data-aos-duration="1000">Proyectos</h1>
-  <div class="page-content grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="mt-7 xl:mt-48 w-[90%] xl:w-[60%] mx-auto">
+  <h1 class="text-4xl xl:text-5xl font-bold colorRed text-center mb-5 xl:mb-16"  data-aos="zoom-in" data-aos-duration="1000">Proyectos</h1>
+  <div class="page-content grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-16">
   @for (item of listProyectData(); track item) {
     <div class="card" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
       <div class="image-wrapper">
@@ -14,7 +14,7 @@
           }
         </div>
         <!-- <p class="copy">Check out all of these gorgeous mountain trips...</p> -->
-         <a [href]="item.enlace" class="bg-[#b22222] mt-1 text-base font-medium px-2 py-1 cursor-pointer max-w-max rounded-xl">Ver proyecto</a>
+        <a [href]="item.enlace" target="_blank" class="bg-[#b22222] mt-1 text-base font-medium px-2 py-1 cursor-pointer max-w-max rounded-xl">Ver proyecto</a>
         <!-- <button class="btn">View Trips</button> -->
       </div>
     </div>

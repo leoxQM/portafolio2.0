@@ -1,22 +1,32 @@
 <app-navbar></app-navbar>
 
 @defer {
-  <app-presentacion></app-presentacion>
+  <div id="inicio">
+    <app-presentacion></app-presentacion>
+  </div>
 }
 
 @defer {
-  <app-sobremi></app-sobremi>
+  <div id="sobremi">
+    <app-sobremi></app-sobremi>
+  </div>
 }
 
 @defer {
-  <app-skills></app-skills>
+  <div id="skills">
+    <app-skills></app-skills>
+  </div>
 }
 
 @defer {
-  <app-proyectos></app-proyectos>
+  <div id="proyectos"  class="scroll-mt-24">
+    <app-proyectos></app-proyectos>
+  </div>
 }
 
 @defer {
-  <app-contactame></app-contactame>
+  <div id="contactame">
+    <app-contactame></app-contactame>
+  </div>
 }
 <canvas #canvasEstrellas class="canvas-fondo"></canvas>
