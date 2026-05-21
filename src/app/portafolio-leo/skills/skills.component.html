@@ -19,7 +19,7 @@
             <div class="grid grid-cols-3 gap-4">
               @for (img of item.imagenes; track img) {
                 <div class="flex justify-center items-center gap-2 flex-col">
-                  <img [src]="img.ruta" [alt]="img.nombre" class="w-[55%]">
+                  <img [src]="img.ruta" [alt]="img.nombre" class="w-[50%] min-h-[38px]">
                   <h2 class="text-sm"> {{img.nombre}} </h2>
                 </div>
               }
