@@ -11,4 +11,15 @@ import { SvgLinkedinComponent } from "../svg-linkedin/svg-linkedin.component";
 })
 export class InicioComponent {
 
+
+
+  goTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  }
 }
