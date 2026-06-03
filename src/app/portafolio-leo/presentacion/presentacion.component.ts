@@ -8,10 +8,10 @@ import { InicioComponent } from "../../@shared/inicio/inicio.component";
   selector: 'app-presentacion',
   imports: [InicioComponent],
   templateUrl: './presentacion.component.html',
-  styleUrl: './presentacion.component.css'
+  styleUrl: './presentacion.component.css',
 })
-export class PresentacionComponent implements OnInit{
-  textos = ['Desarrollador Web', 'Programador'];
+export class PresentacionComponent implements OnInit {
+  textos = ['Desarrollador Web', 'Programador Full Stack'];
   textoMostrado = '';
   textoIndex = 0;
   charIndex = 0;
@@ -19,29 +19,40 @@ export class PresentacionComponent implements OnInit{
   speed = 100;
   pausa = 1500;
 
+  private timeoutId: ReturnType<typeof setTimeout> | null = null;
+
   ngOnInit(): void {
     this.escribir();
+  }
+
+  ngOnDestroy(): void {
+    if (this.timeoutId) clearTimeout(this.timeoutId);
   }
 
   escribir() {
     if (this.escribiendo) {
       if (this.charIndex < this.textos[this.textoIndex].length) {
-        this.textoMostrado += this.textos[this.textoIndex].charAt(this.charIndex);
+        this.textoMostrado += this.textos[this.textoIndex].charAt(
+          this.charIndex,
+        );
         this.charIndex++;
-        setTimeout(() => this.escribir(), this.speed);
+        this.timeoutId = setTimeout(() => this.escribir(), this.speed);
       } else {
         this.escribiendo = false;
-        setTimeout(() => this.escribir(), this.pausa);
+        this.timeoutId = setTimeout(() => this.escribir(), this.pausa);
       }
     } else {
       if (this.charIndex > 0) {
-        this.textoMostrado = this.textos[this.textoIndex].substring(0, this.charIndex - 1);
+        this.textoMostrado = this.textos[this.textoIndex].substring(
+          0,
+          this.charIndex - 1,
+        );
         this.charIndex--;
-        setTimeout(() => this.escribir(), this.speed / 2);
+        this.timeoutId = setTimeout(() => this.escribir(), this.speed / 2);
       } else {
         this.escribiendo = true;
         this.textoIndex = (this.textoIndex + 1) % this.textos.length;
-        setTimeout(() => this.escribir(), this.speed);
+        this.timeoutId = setTimeout(() => this.escribir(), this.speed);
       }
     }
   }

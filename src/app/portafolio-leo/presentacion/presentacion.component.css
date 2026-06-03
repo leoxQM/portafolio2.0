@@ -83,4 +83,17 @@
   margin: auto;
 }
 
+/* curso parpadeante */
 
+.cursor {
+  animation: parpadeo 1s step-start infinite;
+}
+
+@keyframes parpadeo {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.1%, 100% {
+    opacity: 0;
+  }
+}
