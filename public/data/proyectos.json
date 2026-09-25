@@ -47,7 +47,8 @@
       "/imgLeo/ts.svg",
       "/imgLeo/angular.svg",
       "/imgLeo/tailwind.svg",
-      "/imgLeo/primeng.svg"
+      "/imgLeo/primeng.svg",
+      "/imgLeo/springboot.svg"
     ],
     "enlace":"https://leostore.netlify.app/"
   }
